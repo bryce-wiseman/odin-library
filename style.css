@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    max-height: 100vh;
+
+    background-color: hsl(270, 10%, 5%);
+    font-family: 'Poppins', sans-serif;
+}
+
+#header {
+    height: 120px;
+    background-color: hsl(270, 40%, 30%);
+    display: flex;
+    padding: 0 20px;
+    justify-content: start;
+    align-items: center;
+}
+
+#name {
+    color: azure;
+    font-size: 3rem;
+    font-family: 'Satisfy', sans-serif;
+    text-shadow: 2px 2px 8px black;
+}
+
+#main {
+    height: calc(100vh - 120px);
+    margin: 0;
+    padding: 0;
+    color: azure;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#shelf {
+    width: 70%;
+    max-height: 100%;
+    padding: 10px 10px;
+    display: grid;
+    gap: 40px;
+    grid-auto-rows: 100px;
+    
+}
+
+#form {
+    width: 30%;
+    max-height: 100%;
+    background-color: hsl(270, 5%, 12%);
+    padding: 10px;
+    line-height: 2rem;
+}
+
+.text, .buttons {
+    border: none;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.buttons input{
+    width: 10%;
+}
+
+input {
+    background-color: azure;
+    border: inset hsl(270, 40%, 30%) 5px;
+    width: 90%;
+}
+
+#add-book {
+    margin-left: 20px;
+    padding: 5px 10px;
+    background-color: hsl(270, 40%, 30%);
+    border: solid azure 2px;
+    border-radius: 10px;
+    color: azure;
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+
+#add-book:hover {
+    background-color: hsl(270, 40%, 20%);
+}
+
+.book {
+   background-color: hsla(270, 40%, 30%, 40%);
+   width: calc(100% - 20px);
+   height: 100px;
+   border-radius: 10px;
+   padding: 10px;
+   display: flex;
+   flex-direction: column;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.author {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.pages {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.read {
+    text-align: end;
+    margin-top: -24px;
+}
+
+.delete {
+    background-color: hsla(270, 40%, 30%, 0%);
+    border: none;
+    color: azure;
+    font-weight: 600;
+    font-size: 1rem;
+    width: 20px;
+    align-self: flex-end;
+    margin-top: -100px;
+}
+
+.delete:hover {
+    color: hsl(270, 40%, 70%);
+}

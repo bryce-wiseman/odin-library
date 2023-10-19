@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(Like Nook, but Book)</title>
+    <script src="books.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+        <div id="name">Book & Cranny</div>
+    </div>
+    <div id="main">
+        <div id="shelf">
+            
+        </div>
+        <div id="form">
+            <form action="" method="post">
+                <fieldset class="text">
+                    <label for="title">Title:</label>
+                    <br>
+                    <input type="text" id="title" required>
+                    <label for="author">Author:</label>
+                    <br>
+                    <input type="text" id="author" required>
+                    <label for="pages">Number of Pages:</label>
+                    <br>
+                    <input type="number" id="pages" required>
+                    <br>
+                </fieldset>
+                <fieldset class="buttons">
+                    <label for="read">Read:</label>
+                    <input type="radio" name="status" value="true" id="read">
+                    <label for="not-read">Not Read:</label>
+                    <input type="radio" name="status" value="false" id="not-read" >
+                </fieldset>
+                    <button type="submit" id="add-book" onclick="verifyForm()">Add New Book</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
