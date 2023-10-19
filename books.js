@@ -33,6 +33,14 @@ let readVal = document.querySelector('#read')
 
 let bookNum = myShelf.length
 
+function changeReadStatus() {
+    if (myShelf[i].read == true) {
+        read.innerHTML = 'Read'
+    } else {
+        read.innerHTML = 'Not Read'
+    }
+}
+
 function displayShelf () {
     for(i = 0; i < bookNum; i++) {
         let div = document.createElement("div")
@@ -78,6 +86,22 @@ function displayShelf () {
             displayNewShelf()
         })
         document.getElementById('book'+i).appendChild(btn)
+
+        let change = document.createElement("button")
+        change.className = "change"
+        change.innerHTML = 'change status'
+        change.addEventListener('click', () => {
+            let x = Number(btn.id)
+            console.log(myShelf[x].read)
+            if (myShelf[x].read == true) {
+                myShelf[x].read = false
+                read.innerHTML = 'Not Read'
+            } else if (myShelf[x].read == false) {
+                myShelf[x].read = true
+                read.innerHTML = 'Read'
+            }
+        })
+        document.getElementById('book'+i).appendChild(change)
     }
 }
 displayShelf()
@@ -132,6 +156,22 @@ function displayNewShelf() {
             displayNewShelf()
         })
         document.getElementById('book'+i).appendChild(btn)
+
+        let change = document.createElement("button")
+        change.className = "change"
+        change.innerHTML = 'change status'
+        change.addEventListener('click', () => {
+            let x = Number(btn.id)
+            console.log(myShelf[x].read)
+            if (myShelf[x].read == true) {
+                myShelf[x].read = false
+                read.innerHTML = 'Not Read'
+            } else if (myShelf[x].read == false) {
+                myShelf[x].read = true
+                read.innerHTML = 'Read'
+            }
+        })
+        document.getElementById('book'+i).appendChild(change)
     }
 }
 
